@@ -1,0 +1,20 @@
+#appname: MyEdiary
+#publisher: ritchiey
+#url: http://myediary.com.au
+#image: default_app_logo.png
+#appid: au.com.myediary.diary
+#desc: undefined
+#type: desktop
+#guid: fc54bcf8-8e08-447d-8d0d-4705f63d4d32
+runtime:1.1.0
+tiapp:1.1.0
+tifilesystem:1.1.0
+tiplatform:1.1.0
+tiui:1.1.0
+ticodec:1.1.0
+tidatabase:1.1.0
+timedia:1.1.0
+timonkey:1.1.0
+tinetwork:1.1.0
+tiprocess:1.1.0
+tiworker:1.1.0

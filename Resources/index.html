@@ -1,0 +1,232 @@
+<html manifest='/application.manifest'>
+  <head>
+    <meta charset='utf-8'>
+    <title>My EDiary</title>
+    <meta content='MyEDiary' name='description'>
+    <meta content='Distinction Diaries' name='author'>
+    <link href="/stylesheets/diary.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="/javascripts/json.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.offline.js" type="text/javascript"></script>
+    <script src="/javascripts/date.js" type="text/javascript"></script>
+    <script src="/javascripts/underscore-min.js" type="text/javascript"></script>
+    <script src="/javascripts/backbone-min.js" type="text/javascript"></script>
+    <script src="/javascripts/backbone.localStorage-min.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery_ujs.js" type="text/javascript"></script>
+    <script src="/javascripts/diary.js" type="text/javascript"></script>
+    <meta name="csrf-param" content="authenticity_token"/>
+    <meta name="csrf-token" content="h9Y+AwXsqiSoVmmZZFoJhKl/Mtfc9d6FPLQ+XQuj7yk="/>
+  </head>
+  <body>
+    <div id='app'>
+      <header class='page'>
+        <nav id='date_nav'>
+          <a href="#previous">&lt;</a>
+          <span class='date'></span>
+          <a href="#next">&gt;</a>
+        </nav>
+        <h1>Hogwarts</h1>
+      </header>
+      <div id='diary'>
+        <nav id='tasks'>
+          <ul>
+            <li><a href="#print"><img alt="Print_icon" src="/images/print_icon.png" /></a></li>
+            <li><a href="#export"><img alt="Export_icon" src="/images/export_icon.png" /></a></li>
+            <li><a href="#timetable"><img alt="Timetable_icon" src="/images/timetable_icon.png" /></a></li>
+            <li><a href="#calendar"><img alt="Calendar_icon" src="/images/calendar_icon.png" /></a></li>
+            <li><a href="#help"><img alt="Help_icon" src="/images/help_icon.png" /></a></li>
+          </ul>
+        </nav>
+        <div id='pages'>
+          <div id='content'>
+            <header>
+              <div class='left-page'>
+                <blockquote>
+                  Don't go around saying the world owes you a living.
+                  The world owes you nothing. It was here first.
+                  <footer>
+                    Mark Twain
+                  </footer>
+                </blockquote>
+              </div>
+              <div class='right-page'>
+                <div id='announcement'>
+                  School renovations are taking place in the library.
+                  Please be careful when passing the area.
+                </div>
+              </div>
+            </header>
+            <script id='event-template' type='text/html'>
+              <li>
+                ${name}
+              </li>
+            </script>
+            <div id='events-view'>
+              <h1>Events</h1>
+              <ul id='events'></ul>
+            </div>
+            <div id='week-view' style='display:none;'>
+              <article class='day' id='mon'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Mon
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='tue'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Tue
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='wed'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Wed
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='thu'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Thu
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='fri'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Fri
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='sat'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Sat
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+              <article class='day' id='sun'>
+                <div class='left-page'>
+                  <div class='calendar'>
+                    <span class='date'>
+                      15
+                    </span>
+                    <br>
+                    Sun
+                    <ul class='events'></ul>
+                  </div>
+                  <div class='tasks'>
+                    Do some stuff
+                  </div>
+                </div>
+                <div class='notes'>
+                  Wow. What a day!!
+                </div>
+              </article>
+            </div>
+            <div id='task-view' style='display:none;'>
+              <h1>Tasks</h1>
+            </div>
+          </div>
+          <a href="#show-widgets" id="show-widgets-button">&lt;&lt;</a>
+          <div id='widgets'>
+            <a href="#hide-widgets" id="hide-widgets-button">&gt;&gt;</a>
+            <div class='widget'>
+              widget
+            </div>
+            <div class='widget'>
+              widget
+            </div>
+            <div class='widget'>
+              widget
+            </div>
+          </div>
+        </div>
+        <ul id='page-tabs'>
+          <li><a href="#jan">Jan</a></li>
+          <li><a href="#feb">Feb</a></li>
+          <li><a href="#mar">Jan</a></li>
+          <li><a href="#apr">Apr</a></li>
+          <li><a href="#may">May</a></li>
+          <li><a href="#jun">Jun</a></li>
+          <li><a href="#jul">Jul</a></li>
+          <li><a href="#aug">Aug</a></li>
+          <li><a href="#sep">Sep</a></li>
+          <li><a href="#oct">Oct</a></li>
+          <li><a href="#nov">Nov</a></li>
+          <li><a href="#dec">Dec</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

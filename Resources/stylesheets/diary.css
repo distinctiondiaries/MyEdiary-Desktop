@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: black;
+  overflow: hidden; }
+
+#app {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0; }
+  #app header.page {
+    background-color: #202020;
+    color: #f0f0f0; }
+    #app header.page #date_nav {
+      float: right;
+      margin: 0.3em 42px 0 0; }
+  #app #diary {
+    background-color: #202020;
+    border: none;
+    margin: 0;
+    padding: 0.4em;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal; }
+    #app #diary nav#tasks ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 8em; }
+    #app #diary nav#tasks img {
+      width: 50px; }
+    #app #diary #pages {
+      -webkit-box-flex: 1;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      background-image: url("/images/paper.jpg"); }
+      #app #diary #pages #content {
+        background-image: -webkit-gradient(linear, 45% center, 55% center, from(white), color-stop(50%, #999999), to(white));
+        -webkit-box-flex: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        height: 100%;
+        opacity: 0.6; }
+        #app #diary #pages #content header {
+          display: -webkit-box;
+          -webkit-box-orient: horizontal;
+          margin: 1em 0 1em 0; }
+          #app #diary #pages #content header .left-page blockquote {
+            width: 200px;
+            margin: 0 50% 0 50%;
+            font-size: 50%; }
+            #app #diary #pages #content header .left-page blockquote footer {
+              float: right;
+              font-style: italic; }
+          #app #diary #pages #content header .right-page {
+            padding-left: 10%;
+            -webkit-box-flex: 1; }
+            #app #diary #pages #content header .right-page #announcement {
+              width: 200px;
+              margin: 1em 50% 0 50%;
+              font-size: 50%; }
+        #app #diary #pages #content #week-view {
+          display: -webkit-box;
+          -webkit-box-orient: vertical; }
+          #app #diary #pages #content #week-view article.day {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal; }
+            #app #diary #pages #content #week-view article.day .left-page {
+              width: 50%;
+              display: -webkit-box;
+              -webkit-box-orient: horizontal; }
+              #app #diary #pages #content #week-view article.day .left-page .calendar {
+                border: solid 1px black;
+                border-radius: 5px;
+                -webkit-box-flex: 1;
+                margin: 0.5em 5px 0.5em 5px;
+                -webkit-box-flex: 0;
+                width: 3em; }
+              #app #diary #pages #content #week-view article.day .left-page .tasks {
+                border: solid 1px black;
+                border-radius: 5px;
+                -webkit-box-flex: 1;
+                margin: 0.5em 5px 0.5em 5px;
+                -webkit-box-flex: 1;
+                margin-right: 40px; }
+            #app #diary #pages #content #week-view article.day .notes {
+              border: solid 1px black;
+              border-radius: 5px;
+              -webkit-box-flex: 1;
+              margin: 0.5em 5px 0.5em 5px;
+              -webkit-box-flex: 1;
+              margin-left: 40px; }
+      #app #diary #pages #show-widgets-button {
+        display: none; }
+      #app #diary #pages #widgets {
+        background-color: gray;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; }
+        #app #diary #pages #widgets .widget {
+          width: 120px;
+          height: 120px;
+          background-color: white;
+          border: solid 1px black;
+          margin: 4px;
+          border-radius: 12px; }
+    #app #diary #page-tabs {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0 0;
+      border: 0;
+      background-color: #202020;
+      width: 30px; }
+      #app #diary #page-tabs li {
+        padding: 6px 0 6px 0;
+        border-top: solid #202020 1px;
+        border-right: solid #202020 1px;
+        border-bottom: solid #202020 1px;
+        background-color: #404040;
+        border-left: 0;
+        border-radius: 0 8px 8px 0; }
